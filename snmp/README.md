@@ -14,15 +14,7 @@ win10 ： 我自己是开启后，不用重启也可以直接用
 坑1 ： 必须开启window更新服务
 如果你开启不了，可直接按这个博客，下载免安装软件，一键开关window更新。博客：https://blog.csdn.net/liuzongyuan1996/article/details/112763624
 
-坑2： java.lang.UnsupportedClassVersionError
-snmp版本过高 ， 我切换成2.8.2 就没问题了
-```
-        <dependency>
-            <groupId>org.snmp4j</groupId>
-            <artifactId>snmp4j</artifactId>
-            <version>2.8.2</version>
-        </dependency>
-```
+
    
        
         

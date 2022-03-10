@@ -21,13 +21,13 @@ public class SnmpLocalHost {
 
     public static void main(String[] args) {
         collectCPU();        System.out.println(System.lineSeparator());
-        collectMemory();        System.out.println(System.lineSeparator());
-        collectDisk();        System.out.println(System.lineSeparator());
-        collectProcess();        System.out.println(System.lineSeparator());
-        collectService();        System.out.println(System.lineSeparator());
-        collectInterface();        System.out.println(System.lineSeparator());
-        collectPort();        System.out.println(System.lineSeparator());
-        collectSoft();
+//        collectMemory();        System.out.println(System.lineSeparator());
+//        collectDisk();        System.out.println(System.lineSeparator());
+//        collectProcess();        System.out.println(System.lineSeparator());
+//        collectService();        System.out.println(System.lineSeparator());
+//        collectInterface();        System.out.println(System.lineSeparator());
+//        collectPort();        System.out.println(System.lineSeparator());
+//        collectSoft();
     }
 
     //获取cpu使用率
@@ -69,8 +69,9 @@ public class SnmpLocalHost {
                 int percentage = 0;
                 for(TableEvent event : list){
                     VariableBinding[] values = event.getColumns();
-                    if(values != null)
+                    if(values != null){
                         percentage += Integer.parseInt(values[0].getVariable().toString());
+                    }
                 }
                 System.out.println("CPU利用率为："+percentage/list.size()+"%");
             }
